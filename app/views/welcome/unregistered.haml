@@ -1,0 +1,64 @@
+%header.green.big-padding
+	.col-md-10.no-float.center-block
+		.col-md-6.no-padding.inline-block
+			=link_to "/products" do
+				=image_tag "namakaloyan.png",width:"160"
+			%h1.white-text.ultra-big.kostick
+				%strong
+					Ofrese tus productos en linea
+		.col-md-5.inline-block
+			=image_tag "yacatecuhtli.png",width:"500"
+.grey.white-text.big-padding.kostic{style:"margin-top:3em"}
+	.col-md-10.no-float.center-block
+		.absolute{style:"bottom:-4.5em;width:100%;left:0px;"}
+			.text-center.big
+				.col-md-3.inline-block
+					.white.grey-text.circle
+						%strong 1
+				.col-md-3.inline-block
+					.white.grey-text.circle
+						%strong 2
+				.col-md-3.inline-block
+					.white.grey-text.circle
+						%strong 3
+
+		%h2.bigger.kostick.text-center
+			%strong Namakaloyan en 3 pasos
+		%div.text-center.top-space
+			.col-md-3.inline-block.text-left
+				=image_tag "upload-icon.png", class:"col-md-10 inline-block"
+				.top-space 
+					%strong.medium
+						Sube tus archivos
+					%p.white-text.text-justify.small
+						!Libro digital, canción, poema, curso o lo 
+						que se te ocurra sobre el lenguaje nahuatl!
+						Si lo puedes meter en un .Zip , lo puedes Vender.
+			.col-md-3.inline-block.text-left
+				=image_tag "youtube-icon.png", class:"col-md-10 inline-block"
+				.top-space
+					%strong.medium
+						Cuentale a tus seguidores
+					%p.white-text.text-justify.small
+						Comparte el link personalizado de tu producto en tus redes sociales o sitio web.
+			.col-md-3.inline-block.text-left
+				=image_tag "money-icon.png", class:"col-md-10 inline-block"
+				.top-space 
+					%strong.medium
+						Vende y gana dinero
+					%p.white-text.text-justify.small
+						Recibe tu dinero en tu cuenta de PayPal o vía 
+						depósito bancario de manera rápida y fácil.
+
+.red.white-text.big-padding.kostic{style:"margin-top:3em"}
+	.col-md-8.no-float.text-center.center-block
+		=image_tag "media-icons.png", width:"800"
+		%p.medium.col-md-11.center-block.no-float.top-space
+			%strong
+				Vende tus escritos electrónicos, cursos, canciones, dibujos,
+				poemas, fotografías, pinturas, ¡Cualquier producto digital que tenga que ver con el lenguaje!
+.top-space.big-padding.bottom-space
+	.col-md-11.col-xs-12.center-block.no-float
+		=form_tag(create_email_path, method: :post, remote:true, id: "emails-form") do 
+			=email_field_tag "email", nil, class:"col-xs-12 inline-block text-center landing-form", placeholder:"Escribe aquí tu correo electronico"
+		#email-info.red.white-tex.large-padding

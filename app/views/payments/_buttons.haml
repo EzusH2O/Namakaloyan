@@ -1,0 +1,8 @@
+.col-sm-4.col-md-3.inline-block.bold
+	=button_to "/pagar",method: :post,class:"payment-btn paypal-btn no-margion" do  
+		Pagar con
+		=image_tag "paypal_logo_small.png", height:20
+.col-sm-4.col-md-3.inline-block.bold
+	=content_tag :button,class:"payment-btn card-btn no-margion openmodal " do  
+		Pagar con Targeta
+		=image_tag "card_icon.png", height:20

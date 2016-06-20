@@ -1,0 +1,25 @@
+%header
+	%nav.green
+		%ul.no-list.no-padding.text-center
+			%li.col-md-5.inline-block
+				-if user_signed_in?
+					=link_to root_path, class:"right-space white-text" do
+						%i.mdi-action-shopping-basket
+						Mi Tienda
+					=link_to ordenes_path, class:"right-space white-text" do
+						%i.mdi-action-trending-up
+						Ordenes
+					=link_to "", class:"right-space white-text" do
+						%i.mdi-action-alarm
+						Descuentos
+					= link_to 'Cerrar Sesión', destroy_user_session_path, method: :delete,class:"right-space white-text"
+			%li.col-md-3.inline-block
+				=link_to "/products",class:"text-center white-text bold tall-padding" do 
+					=image_tag "namakaloyan.png",height:"50"
+			%li.col-md-3.inline-block
+				=link_to carrito_path,class:"white-text" do
+					%i.mdi-action-shopping-cart 
+					Mi carrito
+					(
+					= @shopping_cart.products.count
+					)

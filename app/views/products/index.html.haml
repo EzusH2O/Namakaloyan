@@ -1,0 +1,27 @@
+.col-xs-12.col-md-11.center-block.no-float
+  .card.large-padding
+    .top-space
+      %h1 Los productos
+
+      %table.table.table-striped.table-hover.medium
+        %thead.bold.center-text
+          %tr
+            %th Nombre
+            %th Precio
+            %th Descripcion
+            %th Dueño
+ 
+
+        %tbody
+          - @products.each do |product|
+            %tr
+              %td= product.name
+              %td= product.pricing
+              %td= product.description[0,39]
+              %td= product.user.email
+              %td= link_to 'Mostrar', product ,class:"btn btn-info"
+       
+
+      .top-space.large-padding.text-center
+      =link_to new_product_path,class:"btn btn-primary no-margin" do 
+        Agregar nuevo producto
